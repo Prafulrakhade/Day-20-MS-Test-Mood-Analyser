@@ -68,5 +68,20 @@ namespace MsTestMoodAnalyser
             //Assert
             Assert.AreEqual(expexted, actual);
         }
+        [TestMethod]
+        public void SadMoodConstructorTest()  //Refactor code
+        {
+            //Arrange
+            string expexted = "SAD";
+            string message = "I am in Sad Mood";
+            MoodAnalyzer moodA = new MoodAnalyzer(message);//Parameterized constructor
+
+            //Act
+            string actual = moodA.AnalyzeMood();
+
+
+            //Assert
+            Assert.AreEqual(expexted, actual);
+        }
     }
 }
