@@ -12,7 +12,7 @@ namespace MsTestMoodAnalyser
         {
             //Arrange
             string expexted = "HAPPY";
-            string message = "I am in Any Mood";
+            string message = "I am in Happy Mood";
             MoodAnalyzer moodA = new MoodAnalyzer(message);//Parameterized constructor
 
             //Act
@@ -74,6 +74,21 @@ namespace MsTestMoodAnalyser
             //Arrange
             string expexted = "SAD";
             string message = "I am in Sad Mood";
+            MoodAnalyzer moodA = new MoodAnalyzer(message);//Parameterized constructor
+
+            //Act
+            string actual = moodA.AnalyzeMood();
+
+
+            //Assert
+            Assert.AreEqual(expexted, actual);
+        }
+        [TestMethod]
+        public void TestForAnyMood()  //Refactor code
+        {
+            //Arrange
+            string expexted = "SAD";
+            string message = "I am in Any Mood";
             MoodAnalyzer moodA = new MoodAnalyzer(message);//Parameterized constructor
 
             //Act
