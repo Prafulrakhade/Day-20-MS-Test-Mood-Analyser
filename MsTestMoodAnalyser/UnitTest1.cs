@@ -37,5 +37,21 @@ namespace MsTestMoodAnalyser
             //Assert
             Assert.AreEqual(expexted, actual);
         }
+
+        [TestMethod]
+        public void HappyMoodTest()  //Refactor TC 1.2 HAPPY mood testing
+        {
+            //Arrange
+            string expexted = "HAPPY";
+            string message = "I am in Happy Mood";
+            MoodAnalyzer moodA = new MoodAnalyzer(message);//Parameterized constructor
+
+            //Act
+            string actual = moodA.AnalyzeMood();
+
+
+            //Assert
+            Assert.AreEqual(expexted, actual);
+        }
     }
 }

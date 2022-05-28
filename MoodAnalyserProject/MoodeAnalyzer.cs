@@ -15,16 +15,14 @@ namespace MoodAnalyserProject
         }
         public string AnalyzeMood() // Creating method to find mood based on message
         {
-            if (message.ToLower().Contains("sad")) // If message contains sad word then return sad mood else return happy mood
-            {
-                return "SAD";
-            }
-            else
+            if (message.ToLower().Contains("happy")) // If message contains sad word then return sad mood else return happy mood
             {
                 return "HAPPY";
             }
-
-
+            else
+            {
+                return "SAD";
+            }
         }
     }
 }
